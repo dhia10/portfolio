@@ -1,0 +1,325 @@
+export const personalInfo = {
+  name: "Dhia Romdhane",
+  title: "Data Scientist & Full Stack Developer",
+  location: "Sousse, Tunisia",
+  github: "https://github.com/dhiaromdhane",
+  email: "dhia.romd1@gmail.com",
+  phone: "+216 53 192 623",
+  description: "Data Scientist specializing in AI/ML with strong full-stack development skills. Experienced in building scalable applications and entrepreneurial ventures. Active with Erasmus+ programs.",
+};
+
+export const education = [
+  {
+    institution: "ESPRIT",
+    degree: "Data Science Engineering",
+    period: "Current",
+    focus: "Machine Learning, Deep Learning, AI Systems",
+    icon: "🎓"
+  },
+  {
+    institution: "ISSAT Sousse",
+    degree: "Computer Science License",
+    period: "3 Years",
+    focus: "Software Engineering, Web Development, Database Systems",
+    icon: "🎓"
+  }
+];
+
+export const experience = [
+  {
+    company: "Clevertech",
+    role: "Data Science Intern (PFE)",
+    period: "2023-2024",
+    project: "Crime Prediction Model",
+    description: "Developed ML models to predict crime types and frequencies in France using time-series analysis",
+    icon: "💼"
+  },
+  {
+    company: "RIDTech Agency",
+    role: "Founder & Lead Developer",
+    period: "2021-Present",
+    project: "Digital Agency",
+    description: "Creating websites, apps, and tools for clients. Sold multiple scraping applications including TikTok Live Scraper and Facebook app",
+    icon: "🚀"
+  },
+  {
+    company: "ProjectLib Ecosystem",
+    role: "Co-Founder & Full Stack Developer",
+    period: "2022-Present",
+    project: "Startup Ecosystem",
+    description: "Building a complete ecosystem with Amin Majbri (Idea Creator & Dev) including marketplace, payment integration, and multiple sub-platforms",
+    icon: "🌐"
+  }
+];
+
+export const skills = {
+  "Data Science & AI": [
+    { name: "Python", level: 95, icon: "🐍" },
+    { name: "Machine Learning", level: 90, icon: "🤖" },
+    { name: "Deep Learning", level: 85, icon: "🧠" },
+    { name: "TensorFlow/Keras", level: 85, icon: "🔥" },
+    { name: "Computer Vision", level: 80, icon: "👁️" },
+    { name: "Time Series Analysis", level: 80, icon: "📈" },
+    { name: "Data Analysis", level: 90, icon: "📊" }
+  ],
+  "Backend Development": [
+    { name: "Laravel", level: 90, icon: "🔴" },
+    { name: "Symfony", level: 85, icon: "🎵" },
+    { name: "Node.js", level: 85, icon: "🟢" },
+    { name: "Spring Boot", level: 75, icon: "🍃" },
+    { name: "Express.js", level: 80, icon: "⚡" },
+    { name: "PHP", level: 90, icon: "🐘" }
+  ],
+  "Frontend Development": [
+    { name: "React", level: 85, icon: "⚛️" },
+    { name: "Angular", level: 75, icon: "🅰️" },
+    { name: "JavaScript/TypeScript", level: 88, icon: "📜" },
+    { name: "Tailwind CSS", level: 90, icon: "🎨" },
+    { name: "HTML/CSS", level: 95, icon: "🌐" }
+  ],
+  "Database & DevOps": [
+    { name: "Firebase/Firestore", level: 90, icon: "🔥" },
+    { name: "MySQL/PostgreSQL", level: 85, icon: "🗄️" },
+    { name: "Oracle/PL-SQL", level: 75, icon: "🏛️" },
+    { name: "Docker", level: 70, icon: "🐳" },
+    { name: "Nginx", level: 75, icon: "🌐" },
+    { name: "Railway/Render", level: 80, icon: "🚂" }
+  ],
+  "Other Technologies": [
+    { name: "JavaFX", level: 80, icon: "☕" },
+    { name: "Three.js", level: 70, icon: "🎮" },
+    { name: "Git/GitHub", level: 90, icon: "🔀" },
+    { name: "REST APIs", level: 90, icon: "🔌" },
+    { name: "SEO", level: 80, icon: "🔍" },
+    { name: "IoT/Cisco", level: 65, icon: "🔌" }
+  ]
+};
+
+export const projects = {
+  ai_ml: [
+    {
+      id: 1,
+      title: "Crime Prediction Model",
+      category: "Machine Learning",
+      description: "PFE internship project at Clevertech. Developed time-series ML models to predict crime types and frequencies in France.",
+      tags: ["Python", "ML", "Time-Series", "Data Analysis"],
+      status: "Completed",
+      highlight: true,
+      icon: "🧠"
+    },
+    {
+      id: 2,
+      title: "Waste Sorting AI (SDG 6 & 14)",
+      category: "Computer Vision",
+      description: "AI system to detect and classify plastic, paper, and organic waste for recycling. Full team project including design, electronics, and AI.",
+      tags: ["Python", "CV", "IoT", "Sustainability"],
+      status: "Completed",
+      icon: "♻️"
+    },
+    {
+      id: 3,
+      title: "AI Password Strength Analyzer",
+      category: "NLP & Security",
+      description: "Intelligent password strength evaluator using real AI logic (not just regex) integrated into JavaFX application.",
+      tags: ["Python", "AI", "JavaFX", "Security"],
+      status: "Completed",
+      icon: "🔐"
+    },
+    {
+      id: 4,
+      title: "3D Printing Support & Volume Analyzer",
+      category: "Computer Vision",
+      description: "Advanced STL viewer with volume, weight, and cost estimation. Learning OrcaSlicer internals for support structure logic.",
+      tags: ["Python", "3D Analysis", "STL", "Algorithms"],
+      status: "In Development",
+      icon: "🖨️"
+    },
+    {
+      id: 5,
+      title: "Fashion MNIST & Keras Projects",
+      category: "Deep Learning",
+      description: "Academic ML/DL projects including Fashion MNIST classification and reinforcement learning implementations.",
+      tags: ["Python", "Keras", "DL", "Academic"],
+      status: "Completed",
+      icon: "👔"
+    }
+  ],
+  ecosystem: [
+    {
+      id: 6,
+      title: "ProjectLib Ecosystem",
+      category: "Full Stack Platform",
+      description: "Main umbrella brand with marketplace, user system, coins economy, real-time updates (Firebase), Konnect payments, and SEO optimization. Co-founded with Amin Majbri.",
+      tags: ["React", "Firebase", "Payments", "Real-time"],
+      status: "Live",
+      highlight: true,
+      link: "https://projectlib.tn",
+      icon: "🚀"
+    },
+    {
+      id: 7,
+      title: "Give-n-Take Platform",
+      category: "Symfony Application",
+      description: "Platform where users give items to earn GoldCoins and buy using SilverCoins. Admin validation system with 3-page architecture.",
+      tags: ["Symfony", "PHP", "Economy", "CRUD"],
+      status: "Live",
+      icon: "🎁"
+    },
+    {
+      id: 8,
+      title: "FunFusion Marketplace",
+      category: "Laravel/Symfony",
+      description: "Large marketplace with buying/selling, coins economy, 3D printing cost calculator, printing orders, and real-time notifications.",
+      tags: ["Laravel", "Firebase", "3D Printing", "Real-time"],
+      status: "Live",
+      icon: "🛒"
+    }
+  ],
+  sold_apps: [
+    {
+      id: 9,
+      title: "TikTok Live Phone Scraper",
+      category: "Automation & Data",
+      description: "Custom tool that reads TikTok live comments, extracts phone numbers, sends to Google Sheets with deduplication and CSV export. SOLD via RIDTech.",
+      tags: ["Python", "Scraping", "Real-time", "Google Sheets"],
+      status: "Sold",
+      highlight: true,
+      icon: "📲"
+    },
+    {
+      id: 10,
+      title: "Facebook Scraping App",
+      category: "Automation",
+      description: "Facebook automation and scraping application. SOLD to client.",
+      tags: ["Python", "Automation", "API"],
+      status: "Sold",
+      icon: "📘"
+    }
+  ],
+  web_dev: [
+    {
+      id: 11,
+      title: "RIDTech Agency Website",
+      category: "Business Platform",
+      description: "Personal brand for creating websites, development services, apps/tools, branding, logos, and UI/UX design for clients.",
+      tags: ["React", "Branding", "UI/UX", "Business"],
+      status: "Live",
+      icon: "🎨"
+    },
+    {
+      id: 12,
+      title: "Symfony CRUD Systems",
+      category: "Backend Development",
+      description: "Multiple complex Symfony projects: Library management, facial recognition login, donation system, café captive portal, forums, products, transactions.",
+      tags: ["Symfony", "PHP", "MySQL", "Authentication"],
+      status: "Multiple Projects",
+      icon: "💻"
+    },
+    {
+      id: 13,
+      title: "JavaFX Applications",
+      category: "Desktop Development",
+      description: "User management with JDBC, profile pages with AI suggestions, login systems with roles (ROLE_USER), and database CRUD operations.",
+      tags: ["JavaFX", "Java", "JDBC", "Desktop"],
+      status: "Multiple Projects",
+      icon: "☕"
+    },
+    {
+      id: 14,
+      title: "Spring Boot Services",
+      category: "Backend Architecture",
+      description: "EntrepriseController with repository/service architecture, Spring Data JPA, and advanced filtering & query logic.",
+      tags: ["Spring Boot", "JPA", "Java", "REST"],
+      status: "Completed",
+      icon: "🍃"
+    },
+    {
+      id: 15,
+      title: "Angular Applications",
+      category: "Frontend Development",
+      description: "Multiple Angular components including suggestions module, home component, date pipe fixes, and UI components.",
+      tags: ["Angular", "TypeScript", "UI", "Components"],
+      status: "Multiple Projects",
+      icon: "🅰️"
+    }
+  ],
+  content_business: [
+    {
+      id: 16,
+      title: "Learn Deutsch with Chill Croco",
+      category: "Content Creation",
+      description: "YouTube channel teaching German to Arabic speakers. Features 3D mascot 'Chill Croco', anime-style content, and full branding.",
+      tags: ["YouTube", "3D Animation", "Education", "Branding"],
+      status: "Active",
+      icon: "🎥"
+    },
+    {
+      id: 17,
+      title: "Ste Romdhane de Commerce",
+      category: "Business",
+      description: "Business specializing in packaging, celebration items, pastry equipment, and event products (birth, Hajj, weddings).",
+      tags: ["Business", "E-commerce", "Events"],
+      status: "Active",
+      icon: "🎉"
+    },
+    {
+      id: 18,
+      title: "متجر الشنقيط Dropshipping",
+      category: "E-commerce",
+      description: "Dropshipping shop focused on Mauritania market with local products.",
+      tags: ["Dropshipping", "E-commerce", "Business"],
+      status: "Active",
+      icon: "🇲🇷"
+    }
+  ],
+  devops_network: [
+    {
+      id: 19,
+      title: "ProjectLib Deployment",
+      category: "DevOps",
+      description: "Custom hosting deployment using Railway/Render/Firebase. Configured Nginx, PHP-FPM, Supervisor for 24/7 operation. Fixed .env, build failures, and Firestore issues.",
+      tags: ["DevOps", "Nginx", "Firebase", "Railway"],
+      status: "Deployed",
+      icon: "🔌"
+    },
+    {
+      id: 20,
+      title: "Cisco Network Labs",
+      category: "Networking",
+      description: "Network configuration with switches (Fa0/1-4), VLANs setup, and captive portal implementation.",
+      tags: ["Cisco", "Networking", "VLANs", "IoT"],
+      status: "Academic",
+      icon: "🌐"
+    }
+  ]
+};
+
+export const languages = [
+  { name: "Arabic", proficiency: "Native" },
+  { name: "French", proficiency: "Fluent" },
+  { name: "English", proficiency: "Fluent" },
+  { name: "Deutsch", proficiency: "Intermediate" }
+];
+
+export const businessActivities = [
+  {
+    title: "Active Trading",
+    description: "Cryptocurrency and financial markets trading",
+    icon: "📈"
+  },
+  {
+    title: "Online Payments",
+    description: "Payment processing integration with Monétique Tunisia",
+    icon: "💳"
+  },
+  {
+    title: "Erasmus+ Programs",
+    description: "Active participation in European educational exchange programs",
+    icon: "🌍"
+  },
+  {
+    title: "3D Animation",
+    description: "Theatre-style Scrum explanations, logo creation, mascot design (Chill Croco)",
+    icon: "🎬"
+  }
+];
