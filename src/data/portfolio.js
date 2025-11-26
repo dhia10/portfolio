@@ -149,8 +149,8 @@ export const projects = {
       id: 6,
       title: "ProjectLib Ecosystem",
       category: "Full Stack Platform",
-      description: "Main umbrella brand with marketplace, user system, coins economy, real-time updates (Firebase), Konnect payments, and SEO optimization. Co-founded with Amin Majbri.",
-      tags: ["React", "Firebase", "Payments", "Real-time"],
+      description: "Main umbrella brand with marketplace, user system, coins economy, real-time updates (Firebase), Konnect payments, and SEO optimization. Deployed on custom hosting with Nginx, PHP-FPM, and Supervisor. Co-founded with Amin Majbri.",
+      tags: ["React", "Firebase", "Payments", "DevOps", "Nginx"],
       status: "Live",
       highlight: true,
       link: "https://projectlib.tn",
@@ -243,47 +243,9 @@ export const projects = {
       icon: "🅰️"
     }
   ],
-  content_business: [
-    {
-      id: 16,
-      title: "Learn Deutsch with Chill Croco",
-      category: "Content Creation",
-      description: "YouTube channel teaching German to Arabic speakers. Features 3D mascot 'Chill Croco', anime-style content, and full branding.",
-      tags: ["YouTube", "3D Animation", "Education", "Branding"],
-      status: "Active",
-      icon: "🎥"
-    },
-    {
-      id: 17,
-      title: "Ste Romdhane de Commerce",
-      category: "Business",
-      description: "Business specializing in packaging, celebration items, pastry equipment, and event products (birth, Hajj, weddings).",
-      tags: ["Business", "E-commerce", "Events"],
-      status: "Active",
-      icon: "🎉"
-    },
-    {
-      id: 18,
-      title: "متجر الشنقيط Dropshipping",
-      category: "E-commerce",
-      description: "Dropshipping shop focused on Mauritania market with local products.",
-      tags: ["Dropshipping", "E-commerce", "Business"],
-      status: "Active",
-      icon: "🇲🇷"
-    }
-  ],
   devops_network: [
     {
       id: 19,
-      title: "ProjectLib Deployment",
-      category: "DevOps",
-      description: "Custom hosting deployment using Railway/Render/Firebase. Configured Nginx, PHP-FPM, Supervisor for 24/7 operation. Fixed .env, build failures, and Firestore issues.",
-      tags: ["DevOps", "Nginx", "Firebase", "Railway"],
-      status: "Deployed",
-      icon: "🔌"
-    },
-    {
-      id: 20,
       title: "Cisco Network Labs",
       category: "Networking",
       description: "Network configuration with switches (Fa0/1-4), VLANs setup, and captive portal implementation.",

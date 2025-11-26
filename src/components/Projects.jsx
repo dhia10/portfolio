@@ -80,7 +80,6 @@ const Projects = () => {
     { id: 'ecosystem', name: 'ProjectLib Ecosystem' },
     { id: 'sold_apps', name: 'Sold Applications' },
     { id: 'web_dev', name: 'Web Development' },
-    { id: 'content_business', name: 'Content & Business' },
     { id: 'devops_network', name: 'DevOps & Network' }
   ];
   
