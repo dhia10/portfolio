@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Github, Mail, Briefcase } from 'lucide-react';
+import { Github, Mail, Briefcase } from 'lucide-react';
 import { personalInfo, businessActivities } from '../data/portfolio';
 
 const Footer = () => {
@@ -71,11 +71,6 @@ const Footer = () => {
         
         {/* Footer Bottom */}
         <div className="text-center text-gray-400">
-          <p className="flex items-center justify-center gap-2 mb-2">
-            <span>Made with</span>
-            <Heart size={16} className="text-red-500 fill-red-500" />
-            <span>using React, Three.js & Tailwind CSS</span>
-          </p>
           <p className="text-sm">
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>

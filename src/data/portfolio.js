@@ -208,12 +208,12 @@ export const projects = {
     },
     {
       id: 12,
-      title: "Symfony CRUD Systems",
-      category: "Backend Development",
-      description: "Multiple complex Symfony projects: Library management, facial recognition login, donation system, café captive portal, forums, products, transactions.",
-      tags: ["Symfony", "PHP", "MySQL", "Authentication"],
-      status: "Multiple Projects",
-      icon: "💻"
+      title: "4G/5G & Fiber Optic Coverage Analysis",
+      category: "Network Analysis Platform",
+      description: "Analysis, mapping and improvement of 4G/5G and Fiber Optic network coverage in Tebarka using Symfony. Comprehensive network infrastructure assessment and optimization tool.",
+      tags: ["Symfony", "Network Analysis", "Mapping", "Telecommunications"],
+      status: "Completed",
+      icon: "📡"
     },
     {
       id: 13,
@@ -226,32 +226,12 @@ export const projects = {
     },
     {
       id: 14,
-      title: "Spring Boot Services",
-      category: "Backend Architecture",
-      description: "EntrepriseController with repository/service architecture, Spring Data JPA, and advanced filtering & query logic.",
-      tags: ["Spring Boot", "JPA", "Java", "REST"],
+      title: "Coffee Management Website",
+      category: "Full Stack Application",
+      description: "Complete coffee shop management system with Spring Boot backend (repository/service architecture, JPA) and Angular frontend. Features include order management, inventory tracking, and customer interface.",
+      tags: ["Spring Boot", "Angular", "Java", "TypeScript"],
       status: "Completed",
-      icon: "🍃"
-    },
-    {
-      id: 15,
-      title: "Angular Applications",
-      category: "Frontend Development",
-      description: "Multiple Angular components including suggestions module, home component, date pipe fixes, and UI components.",
-      tags: ["Angular", "TypeScript", "UI", "Components"],
-      status: "Multiple Projects",
-      icon: "🅰️"
-    }
-  ],
-  devops_network: [
-    {
-      id: 19,
-      title: "Cisco Network Labs",
-      category: "Networking",
-      description: "Network configuration with switches (Fa0/1-4), VLANs setup, and captive portal implementation.",
-      tags: ["Cisco", "Networking", "VLANs", "IoT"],
-      status: "Academic",
-      icon: "🌐"
+      icon: "☕"
     }
   ]
 };

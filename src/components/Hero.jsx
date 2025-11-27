@@ -12,10 +12,26 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="text-center max-w-4xl"
       >
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+          className="mb-8 flex justify-center"
+        >
+          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-cosmic-blue shadow-2xl" style={{ boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(99, 102, 241, 0.4)' }}>
+            <img 
+              src="/me.jpeg" 
+              alt={personalInfo.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+        
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+          transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
           className="mb-6"
         >
           <h1 className="text-6xl md:text-8xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 0 30px rgba(99, 102, 241, 0.8), 0 0 60px rgba(59, 130, 246, 0.5)' }}>
@@ -76,15 +92,6 @@ const Hero = () => {
           </div>
         </motion.div>
         
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1 }}
-          className="animate-bounce mt-12"
-        >
-          <div className="text-4xl">👇</div>
-          <p className="text-sm text-gray-400 mt-2">Scroll to explore</p>
-        </motion.div>
       </motion.div>
     </section>
   );

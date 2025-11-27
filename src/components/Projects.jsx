@@ -79,8 +79,7 @@ const Projects = () => {
     { id: 'ai_ml', name: 'AI & Machine Learning' },
     { id: 'ecosystem', name: 'ProjectLib Ecosystem' },
     { id: 'sold_apps', name: 'Sold Applications' },
-    { id: 'web_dev', name: 'Web Development' },
-    { id: 'devops_network', name: 'DevOps & Network' }
+    { id: 'web_dev', name: 'Web Development' }
   ];
   
   const getFilteredProjects = () => {
