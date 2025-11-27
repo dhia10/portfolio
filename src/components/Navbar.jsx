@@ -56,7 +56,7 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-cosmic-cyan transition-colors duration-300 font-medium"
+                className="text-slate-200 hover:text-primary-400 transition-colors duration-300 font-medium text-sm"
               >
                 {item.label}
               </button>
@@ -67,14 +67,14 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="mailto:dhia.romd1@gmail.com"
-              className="glass-effect px-4 py-2 rounded-full flex items-center gap-2 hover:bg-cosmic-blue/20 transition-all text-sm"
+              className="glass-effect px-3 py-1.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all text-xs"
             >
               <Mail size={16} />
               <span>dhia.romd1@gmail.com</span>
             </a>
             <a
               href="tel:+21653192623"
-              className="glass-effect px-4 py-2 rounded-full flex items-center gap-2 hover:bg-cosmic-purple/20 transition-all text-sm"
+              className="glass-effect px-3 py-1.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all text-xs"
             >
               <Phone size={16} />
               <span>53 192 623</span>

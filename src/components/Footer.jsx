@@ -14,7 +14,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-center mb-8" style={{ color: '#ffffff', textShadow: '0 0 20px rgba(99, 102, 241, 0.5)' }}>
+          <h3 className="text-3xl font-bold text-center mb-8 text-white">
             Additional Activities
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -27,10 +27,10 @@ const Footer = () => {
                 transition={{ delay: index * 0.1 }}
                 className="glass-effect p-6 rounded-xl text-center bg-black/40"
               >
-                <h4 className="text-xl font-bold mb-2" style={{ color: '#06b6d4', textShadow: '0 0 10px rgba(6, 182, 212, 0.5)' }}>
+                <h4 className="text-lg font-bold mb-2 text-primary-400">
                   {activity.title}
                 </h4>
-                <p style={{ color: '#e5e7eb', textShadow: '0 0 5px rgba(0, 0, 0, 0.8)' }}>{activity.description}</p>
+                <p className="text-sm text-slate-300">{activity.description}</p>
               </motion.div>
             ))}
           </div>
@@ -43,16 +43,16 @@ const Footer = () => {
           viewport={{ once: true }}
           className="glass-effect p-8 rounded-2xl mb-12 text-center bg-black/40"
         >
-          <h3 className="text-3xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 0 20px rgba(99, 102, 241, 0.5)' }}>
+          <h3 className="text-3xl font-bold mb-4 text-white">
             Let's Work Together
           </h3>
-          <p className="mb-6 text-lg" style={{ color: '#e5e7eb', textShadow: '0 0 5px rgba(0, 0, 0, 0.8)' }}>
+          <p className="mb-6 text-base text-slate-300">
             Interested in AI/ML solutions, web development, or entrepreneurial ventures?
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href={`mailto:${personalInfo.email}`}
-              className="glass-effect px-6 py-3 rounded-full flex items-center gap-2 hover:bg-cosmic-blue/20 transition-all duration-300 hover:scale-105"
+              className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all duration-300 hover:scale-105"
             >
               <Mail size={20} />
               <span>Email Me</span>
@@ -61,7 +61,7 @@ const Footer = () => {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-effect px-6 py-3 rounded-full flex items-center gap-2 hover:bg-cosmic-purple/20 transition-all duration-300 hover:scale-105"
+              className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all duration-300 hover:scale-105"
             >
               <Github size={20} />
               <span>GitHub</span>

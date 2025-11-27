@@ -1,25 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Github, Mail, Phone, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative z-10 px-4 pt-16">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="text-center max-w-4xl"
       >
         {/* Profile Photo */}
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
+          initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-8 flex justify-center"
         >
-          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-cosmic-blue shadow-2xl" style={{ boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(99, 102, 241, 0.4)' }}>
+          <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary-500 shadow-xl">
             <img 
               src="/me.jpeg" 
               alt={personalInfo.name}
@@ -29,12 +29,12 @@ const Hero = () => {
         </motion.div>
         
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
-          className="mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mb-4"
         >
-          <h1 className="text-6xl md:text-8xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 0 30px rgba(99, 102, 241, 0.8), 0 0 60px rgba(59, 130, 246, 0.5)' }}>
+          <h1 className="text-5xl md:text-7xl font-bold mb-3 text-white">
             {personalInfo.name}
           </h1>
         </motion.div>
@@ -43,7 +43,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-3xl md:text-4xl font-semibold mb-6" style={{ color: '#3b82f6', textShadow: '0 0 20px rgba(59, 130, 246, 0.7)' }}
+          className="text-2xl md:text-3xl font-medium mb-6 text-primary-400"
         >
           {personalInfo.title}
         </motion.h2>
@@ -51,8 +51,8 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed" style={{ color: '#e5e7eb', textShadow: '0 0 10px rgba(0, 0, 0, 0.8)' }}
+          transition={{ delay: 0.6 }}
+          className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed text-slate-300"
         >
           {personalInfo.description}
         </motion.p>
@@ -60,35 +60,35 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
-          className="flex flex-wrap justify-center gap-4 mb-8"
+          transition={{ delay: 0.7 }}
+          className="flex flex-wrap justify-center gap-3 mb-8"
         >
           <a
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-effect px-6 py-3 rounded-full flex items-center gap-2 hover:bg-cosmic-purple/20 transition-all duration-300 hover:scale-105"
+            className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all duration-300 hover:scale-105"
           >
-            <Github size={20} />
-            <span>GitHub</span>
+            <Github size={18} />
+            <span className="text-sm font-medium">GitHub</span>
           </a>
           
           <a
             href={`mailto:${personalInfo.email}`}
-            className="glass-effect px-6 py-3 rounded-full flex items-center gap-2 hover:bg-cosmic-blue/20 transition-all duration-300 hover:scale-105"
+            className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-primary-500/10 hover:border-primary-500/50 transition-all duration-300 hover:scale-105"
           >
-            <Mail size={20} />
-            <span>Email</span>
+            <Mail size={18} />
+            <span className="text-sm font-medium">Email</span>
           </a>
           
-          <div className="glass-effect px-6 py-3 rounded-full flex items-center gap-2">
-            <Phone size={20} />
-            <span>{personalInfo.phone}</span>
+          <div className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2">
+            <Phone size={18} />
+            <span className="text-sm font-medium">{personalInfo.phone}</span>
           </div>
           
-          <div className="glass-effect px-6 py-3 rounded-full flex items-center gap-2">
-            <MapPin size={20} />
-            <span>{personalInfo.location}</span>
+          <div className="glass-effect px-5 py-2.5 rounded-lg flex items-center gap-2">
+            <MapPin size={18} />
+            <span className="text-sm font-medium">{personalInfo.location}</span>
           </div>
         </motion.div>
         

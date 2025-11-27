@@ -7,11 +7,10 @@ const Languages = () => {
     <section className="relative z-10 px-4 py-20">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-bold text-center mb-16"
-          style={{ color: '#ffffff', textShadow: '0 0 20px rgba(99, 102, 241, 0.5)' }}
+          className="text-4xl md:text-5xl font-bold text-center mb-12 text-white"
         >
           Languages
         </motion.h2>
@@ -20,17 +19,16 @@ const Languages = () => {
           {languages.map((lang, index) => (
             <motion.div
               key={lang.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="glass-effect p-8 rounded-2xl text-center bg-black/40"
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className="glass-effect p-6 rounded-xl text-center hover:border-primary-500/50 transition-all duration-300"
             >
-              <h3 className="text-3xl font-bold mb-3 text-white" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }}>
+              <h3 className="text-2xl font-bold mb-2 text-white">
                 {lang.name}
               </h3>
-              <p className="text-cosmic-cyan font-medium text-lg" style={{ textShadow: '0 0 5px rgba(6, 182, 212, 0.5)' }}>
+              <p className="text-primary-400 font-medium text-sm">
                 {lang.proficiency}
               </p>
             </motion.div>

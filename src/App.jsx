@@ -38,9 +38,9 @@ function App() {
       </div>
       
       {/* Scroll Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-800 z-50">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-slate-800 z-50">
         <div
-          className="h-full bg-gradient-to-r from-cosmic-purple via-cosmic-blue to-cosmic-cyan transition-all duration-300"
+          className="h-full bg-gradient-to-r from-primary-500 via-accent-blue to-accent-cyan transition-all duration-300"
           style={{
             width: `${(scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`
           }}
