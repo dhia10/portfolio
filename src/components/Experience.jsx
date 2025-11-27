@@ -24,6 +24,7 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="glass-effect p-6 rounded-xl hover:border-primary-500/50 transition-all duration-300"
+              style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 0 15px rgba(14, 165, 233, 0.1)' }}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="mb-3 md:mb-0">

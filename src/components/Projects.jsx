@@ -11,8 +11,9 @@ const ProjectCard = ({ project, index }) => {
       viewport={{ once: true }}
       transition={{ delay: index * 0.05, duration: 0.5 }}
       className={`glass-effect p-6 rounded-xl relative overflow-hidden hover:border-primary-500/50 transition-all duration-300 ${
-        project.highlight ? 'ring-2 ring-primary-500/50' : ''
+        project.highlight ? 'ring-2 ring-primary-500/50 shadow-2xl shadow-primary-500/20' : ''
       }`}
+      style={project.highlight ? { boxShadow: '0 0 40px rgba(14, 165, 233, 0.3)' } : {}}
     >
       {project.highlight && (
         <div className="absolute top-4 right-4">

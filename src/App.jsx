@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import BlackHoleScene from './components/BlackHole';
+import Starfield from './components/Starfield';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
@@ -22,6 +23,9 @@ function App() {
     <div className="relative min-h-screen">
       {/* 3D Background */}
       <BlackHoleScene />
+      
+      {/* Starfield */}
+      <Starfield />
       
       {/* Navbar */}
       <Navbar />
