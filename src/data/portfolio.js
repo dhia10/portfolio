@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Dhia Romdhane",
   title: "Data Scientist & Full Stack Developer",
   location: "Sousse, Tunisia",
-  github: "https://github.com/dhiaromdhane",
+  github: "https://github.com/dhia10",
   email: "dhia.romd1@gmail.com",
   phone: "+216 53 192 623",
   description: "Data Scientist specializing in AI/ML with strong full-stack development skills. Experienced in building scalable applications and entrepreneurial ventures. Active with Erasmus+ programs.",

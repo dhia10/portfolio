@@ -34,18 +34,20 @@ const Starfield = () => {
       });
     }
 
-    // Shooting stars (MORE FREQUENT)
+    // Shooting stars (MAXIMUM FREQUENCY - Spectacular!)
     const shootingStars = [];
     
     const createShootingStar = () => {
-      if (Math.random() > 0.95) { // More frequent
+      // Much more frequent - almost constant shooting stars!
+      if (Math.random() > 0.92) {
         shootingStars.push({
           x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height * 0.5,
-          length: Math.random() * 120 + 60,
-          speed: Math.random() * 15 + 8,
+          y: Math.random() * canvas.height * 0.6, // More vertical spread
+          length: Math.random() * 150 + 80, // Longer trails
+          speed: Math.random() * 20 + 10, // Faster
           opacity: 1,
-          angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3,
+          angle: Math.PI / 4 + (Math.random() - 0.5) * 0.5, // More angle variety
+          color: Math.random() > 0.8 ? 'cyan' : 'white', // Some cyan shooting stars
         });
       }
     };
@@ -194,12 +196,27 @@ const Starfield = () => {
         ctx.lineTo(endX, endY);
         
         const gradient = ctx.createLinearGradient(star.x, star.y, endX, endY);
-        gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
-        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        
+        // Different colors for variety
+        if (star.color === 'cyan') {
+          gradient.addColorStop(0, `rgba(6, 182, 212, ${star.opacity})`);
+          gradient.addColorStop(0.3, `rgba(14, 165, 233, ${star.opacity * 0.8})`);
+          gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
+        } else {
+          gradient.addColorStop(0, `rgba(255, 255, 255, ${star.opacity})`);
+          gradient.addColorStop(0.3, `rgba(224, 242, 254, ${star.opacity * 0.8})`);
+          gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        }
         
         ctx.strokeStyle = gradient;
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2.5; // Slightly thicker for visibility
         ctx.stroke();
+        
+        // Add glow effect
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = star.color === 'cyan' ? 'rgba(6, 182, 212, 0.5)' : 'rgba(255, 255, 255, 0.5)';
+        ctx.stroke();
+        ctx.shadowBlur = 0;
         
         // Move shooting star
         star.x += Math.cos(star.angle) * star.speed;
