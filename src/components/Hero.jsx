@@ -88,20 +88,35 @@ const Hero = () => {
           >
             <div className="relative">
               {/* Cosmic glow effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 to-cyan-500 blur-3xl opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 via-cyan-500 to-purple-500 blur-3xl opacity-20 animate-pulse"></div>
               
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-2xl" style={{ boxShadow: '0 0 60px rgba(14, 165, 233, 0.5), 0 0 100px rgba(6, 182, 212, 0.3)' }}>
+              {/* Full photo with cosmic frame */}
+              <div className="relative w-72 md:w-96 lg:w-[450px] rounded-2xl overflow-hidden border-2 border-primary-500/50 shadow-2xl" 
+                   style={{ 
+                     boxShadow: '0 0 40px rgba(14, 165, 233, 0.4), 0 0 80px rgba(6, 182, 212, 0.2), inset 0 0 60px rgba(14, 165, 233, 0.1)',
+                     background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(6, 182, 212, 0.05))'
+                   }}>
                 <img 
                   src="/me.jpeg" 
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
+                  style={{ aspectRatio: '1/1.2' }}
                 />
+                
+                {/* Cosmic overlay effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent pointer-events-none"></div>
               </div>
               
-              {/* Orbiting particles */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
-                <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary-400 rounded-full animate-orbit" style={{ boxShadow: '0 0 10px rgba(14, 165, 233, 0.8)' }}></div>
+              {/* Orbiting particles around photo */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+                <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-orbit" style={{ boxShadow: '0 0 10px rgba(6, 182, 212, 0.8)', animationDuration: '8s' }}></div>
+                <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full animate-orbit" style={{ boxShadow: '0 0 10px rgba(59, 130, 246, 0.8)', animationDuration: '12s', animationDelay: '2s' }}></div>
+                <div className="absolute left-0 top-1/2 w-1.5 h-1.5 bg-purple-400 rounded-full animate-orbit" style={{ boxShadow: '0 0 8px rgba(168, 85, 247, 0.8)', animationDuration: '10s', animationDelay: '1s' }}></div>
               </div>
+              
+              {/* Floating cosmic particles */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
             </div>
           </motion.div>
         </div>

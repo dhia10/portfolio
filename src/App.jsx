@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BlackHoleScene from './components/BlackHole';
 import Starfield from './components/Starfield';
+import CosmicParticles from './components/CosmicParticles';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
@@ -26,6 +27,9 @@ function App() {
       
       {/* Starfield */}
       <Starfield />
+      
+      {/* Cosmic Particles */}
+      <CosmicParticles />
       
       {/* Navbar */}
       <Navbar />

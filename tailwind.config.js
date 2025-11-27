@@ -34,15 +34,19 @@ export default {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-30px)' },
         },
         glow: {
           '0%': { boxShadow: '0 0 5px #6366f1, 0 0 10px #6366f1' },
           '100%': { boxShadow: '0 0 10px #6366f1, 0 0 20px #6366f1, 0 0 30px #6366f1' },
         },
         orbit: {
-          '0%': { transform: 'rotate(0deg) translateX(300px) rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg) translateX(300px) rotate(-360deg)' },
+          '0%': { transform: 'rotate(0deg) translateX(100px) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(100px) rotate(-360deg)' },
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
         }
       }
     },

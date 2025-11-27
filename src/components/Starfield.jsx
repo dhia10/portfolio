@@ -18,9 +18,9 @@ const Starfield = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Create stars
+    // Create stars (INCREASED)
     const stars = [];
-    const numStars = 300;
+    const numStars = 600;
     
     for (let i = 0; i < numStars; i++) {
       stars.push({
@@ -34,25 +34,128 @@ const Starfield = () => {
       });
     }
 
-    // Shooting stars
+    // Shooting stars (MORE FREQUENT)
     const shootingStars = [];
     
     const createShootingStar = () => {
-      if (Math.random() > 0.98) {
+      if (Math.random() > 0.95) { // More frequent
         shootingStars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height * 0.5,
-          length: Math.random() * 80 + 40,
-          speed: Math.random() * 10 + 5,
+          length: Math.random() * 120 + 60,
+          speed: Math.random() * 15 + 8,
           opacity: 1,
-          angle: Math.PI / 4,
+          angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3,
         });
       }
     };
 
+    // Planets
+    const planets = [
+      { x: canvas.width * 0.15, y: canvas.height * 0.3, radius: 40, color1: '#4338ca', color2: '#6366f1', speed: 0.0002, angle: 0 },
+      { x: canvas.width * 0.85, y: canvas.height * 0.6, radius: 50, color1: '#0891b2', color2: '#06b6d4', speed: 0.0003, angle: Math.PI },
+      { x: canvas.width * 0.75, y: canvas.height * 0.2, radius: 30, color1: '#7c3aed', color2: '#a78bfa', speed: 0.00025, angle: Math.PI / 2 },
+    ];
+
+    // Moons
+    const moons = [
+      { planet: 0, distance: 70, size: 8, speed: 0.002, angle: 0, color: '#94a3b8' },
+      { planet: 1, distance: 80, size: 10, speed: 0.0015, angle: Math.PI, color: '#cbd5e1' },
+      { planet: 1, distance: 100, size: 6, speed: 0.001, angle: 0, color: '#e2e8f0' },
+    ];
+
+    // Asteroids / Space Dust
+    const asteroids = [];
+    for (let i = 0; i < 50; i++) {
+      asteroids.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2 + 0.5,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        opacity: Math.random() * 0.3 + 0.2,
+      });
+    }
+
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw planets
+      planets.forEach((planet) => {
+        // Planet glow
+        const gradient = ctx.createRadialGradient(planet.x, planet.y, 0, planet.x, planet.y, planet.radius * 1.5);
+        gradient.addColorStop(0, planet.color2 + '40');
+        gradient.addColorStop(0.5, planet.color1 + '20');
+        gradient.addColorStop(1, 'transparent');
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(planet.x, planet.y, planet.radius * 1.5, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Planet body
+        const planetGrad = ctx.createRadialGradient(
+          planet.x - planet.radius * 0.3,
+          planet.y - planet.radius * 0.3,
+          0,
+          planet.x,
+          planet.y,
+          planet.radius
+        );
+        planetGrad.addColorStop(0, planet.color2);
+        planetGrad.addColorStop(1, planet.color1);
+        ctx.fillStyle = planetGrad;
+        ctx.beginPath();
+        ctx.arc(planet.x, planet.y, planet.radius, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Atmosphere/ring effect
+        ctx.strokeStyle = planet.color2 + '30';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.ellipse(planet.x, planet.y + planet.radius * 0.2, planet.radius * 1.3, planet.radius * 0.3, 0, 0, Math.PI * 2);
+        ctx.stroke();
+        
+        // Slow rotation
+        planet.angle += planet.speed;
+      });
+      
+      // Draw moons
+      moons.forEach((moon) => {
+        const planet = planets[moon.planet];
+        const moonX = planet.x + Math.cos(moon.angle) * moon.distance;
+        const moonY = planet.y + Math.sin(moon.angle) * moon.distance;
+        
+        // Moon glow
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, moon.size * 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = moon.color + '40';
+        ctx.fill();
+        
+        // Moon body
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, moon.size, 0, Math.PI * 2);
+        ctx.fillStyle = moon.color;
+        ctx.fill();
+        
+        moon.angle += moon.speed;
+      });
+      
+      // Draw asteroids/space dust
+      asteroids.forEach((asteroid) => {
+        ctx.beginPath();
+        ctx.arc(asteroid.x, asteroid.y, asteroid.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(148, 163, 184, ${asteroid.opacity})`;
+        ctx.fill();
+        
+        asteroid.x += asteroid.vx;
+        asteroid.y += asteroid.vy;
+        
+        if (asteroid.x < 0) asteroid.x = canvas.width;
+        if (asteroid.x > canvas.width) asteroid.x = 0;
+        if (asteroid.y < 0) asteroid.y = canvas.height;
+        if (asteroid.y > canvas.height) asteroid.y = 0;
+      });
       
       // Draw and update stars
       stars.forEach((star) => {
