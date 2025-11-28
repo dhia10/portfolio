@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Dhia Romdhane",
   title: "Data Scientist & Full Stack Developer",
-  location: "Sousse, Tunisia",
+  location: "Tunisia",
   github: "https://github.com/dhia10",
   email: "dhia.romd1@gmail.com",
   phone: "+216 53 192 623",
@@ -12,16 +12,47 @@ export const education = [
   {
     institution: "ESPRIT",
     degree: "Data Science Engineering",
-    period: "Current",
     focus: "Machine Learning, Deep Learning, AI Systems",
     icon: "🎓"
   },
   {
     institution: "ISSAT Sousse",
     degree: "Computer Science License",
-    period: "3 Years",
     focus: "Software Engineering, Web Development, Database Systems",
     icon: "🎓"
+  }
+];
+
+export const certifications = [
+  {
+    title: "Building RAG Agents with LLMs",
+    issuer: "NVIDIA",
+    year: "2024",
+    icon: "🤖"
+  },
+  {
+    title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations",
+    issuer: "Oracle",
+    year: "2025",
+    icon: "☁️"
+  },
+  {
+    title: "Cisco Certified Network Associate (CCNA)",
+    issuer: "Cisco",
+    year: "2023",
+    icon: "🌐"
+  },
+  {
+    title: "The Machine Learning Process A-Z",
+    issuer: "365 Data Science",
+    year: "2023",
+    icon: "📊"
+  },
+  {
+    title: "The Machine Learning Algorithms A-Z",
+    issuer: "365 Data Science",
+    year: "2023",
+    icon: "📈"
   }
 ];
 
@@ -124,6 +155,15 @@ export const projects = {
       tags: ["Python", "AI", "JavaFX", "Security"],
       status: "Completed",
       icon: "🔐"
+    },
+    {
+      id: 15,
+      title: "Network Security & Penetration Testing Lab",
+      category: "Cybersecurity",
+      description: "Hands-on security projects including network vulnerability assessment, basic penetration testing techniques, and secure application development practices. Understanding of common vulnerabilities (SQL injection, XSS, CSRF) and mitigation strategies.",
+      tags: ["Security", "Networking", "Penetration Testing", "OWASP"],
+      status: "Ongoing Learning",
+      icon: "🔒"
     },
     {
       id: 4,

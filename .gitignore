@@ -30,3 +30,8 @@ dist-ssr
 
 # Build files
 build
+
+# Large 3D models
+*.glb
+*.gltf
+public/black_hole.glb

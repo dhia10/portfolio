@@ -10,26 +10,26 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.05, duration: 0.5 }}
-      className={`glass-effect p-6 rounded-xl relative overflow-hidden hover:border-primary-500/50 transition-all duration-300 ${
+      className={`glass-effect p-4 sm:p-5 md:p-6 rounded-xl relative overflow-hidden hover:border-primary-500/50 transition-all duration-300 ${
         project.highlight ? 'ring-2 ring-primary-500/50 shadow-2xl shadow-primary-500/20' : ''
       }`}
       style={project.highlight ? { boxShadow: '0 0 40px rgba(14, 165, 233, 0.3)' } : {}}
     >
       {project.highlight && (
-        <div className="absolute top-4 right-4">
-          <Star className="text-amber-400 fill-amber-400" size={20} />
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+          <Star className="text-amber-400 fill-amber-400" size={16} />
         </div>
       )}
       
-      <h3 className="text-xl font-bold mb-2 text-white">
+      <h3 className="text-lg sm:text-xl font-bold mb-2 text-white pr-6">
         {project.title}
       </h3>
       
-      <p className="text-sm mb-3 font-medium text-primary-400">
+      <p className="text-xs sm:text-sm mb-3 font-medium text-primary-400">
         {project.category}
       </p>
       
-      <p className="mb-4 leading-relaxed text-slate-300 text-sm">
+      <p className="mb-4 leading-relaxed text-slate-300 text-xs sm:text-sm">
         {project.description}
       </p>
       
@@ -92,13 +92,13 @@ const Projects = () => {
   const filteredProjects = getFilteredProjects();
   
   return (
-    <section id="projects" className="min-h-screen relative z-10 px-4 py-20">
+    <section id="projects" className="min-h-screen relative z-10 px-4 sm:px-6 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-4 text-white"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 text-white"
           style={{ textShadow: '0 0 30px rgba(14, 165, 233, 0.5), 0 0 60px rgba(6, 182, 212, 0.3)' }}
         >
           Projects Portfolio
@@ -108,20 +108,20 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-12 text-base text-slate-300"
+          className="text-center mb-8 sm:mb-12 text-sm sm:text-base text-slate-300"
         >
           {Object.values(projects).flat().length}+ projects across AI/ML, Web Development, and Entrepreneurship
         </motion.p>
         
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
           {categories.map((cat) => (
             <motion.button
               key={cat.id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm ${
+              className={`px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-lg font-medium transition-all duration-300 text-xs sm:text-sm ${
                 activeCategory === cat.id
                   ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30'
                   : 'glass-effect hover:bg-primary-500/10 hover:border-primary-500/50'
@@ -135,7 +135,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <motion.div
           layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
         >
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />

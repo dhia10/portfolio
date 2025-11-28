@@ -1,18 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import BlackHoleScene from './components/BlackHole';
-import Starfield from './components/Starfield';
-import CosmicParticles from './components/CosmicParticles';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Languages from './components/Languages';
-import Projects from './components/Projects';
-import Footer from './components/Footer';
+
+// Lazy load heavy components for better performance
+const Starfield = lazy(() => import('./components/Starfield'));
+const CosmicParticles = lazy(() => import('./components/CosmicParticles'));
+const Education = lazy(() => import('./components/Education'));
+const Certifications = lazy(() => import('./components/Certifications'));
+const Experience = lazy(() => import('./components/Experience'));
+const Skills = lazy(() => import('./components/Skills'));
+const Languages = lazy(() => import('./components/Languages'));
+const Projects = lazy(() => import('./components/Projects'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect mobile devices for performance optimization
+    const checkMobile = () => {
+      const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+      setIsMobile(mobile);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -22,14 +36,20 @@ function App() {
 
   return (
     <div className="relative min-h-screen">
-      {/* 3D Background */}
-      <BlackHoleScene />
-      
-      {/* Starfield */}
-      <Starfield />
-      
-      {/* Cosmic Particles */}
-      <CosmicParticles />
+      <Suspense fallback={
+        <div className="fixed inset-0 bg-slate-950 flex items-center justify-center z-50">
+          <div className="text-center">
+            <div className="inline-block w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p className="text-white text-lg">Loading...</p>
+          </div>
+        </div>
+      }>
+        {/* Starfield - Simplified on mobile */}
+        <Starfield isMobile={isMobile} />
+        
+        {/* Cosmic Particles - Reduced on mobile */}
+        <CosmicParticles isMobile={isMobile} />
+      </Suspense>
       
       {/* Navbar */}
       <Navbar />
@@ -37,12 +57,15 @@ function App() {
       {/* Content */}
       <div className="relative z-10">
         <Hero />
-        <Education />
-        <Experience />
-        <Skills />
-        <Languages />
-        <Projects />
-        <Footer />
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Education />
+          <Certifications />
+          <Experience />
+          <Skills />
+          <Languages />
+          <Projects />
+          <Footer />
+        </Suspense>
       </div>
       
       {/* Scroll Progress Bar */}

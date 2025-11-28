@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const Starfield = () => {
+const Starfield = ({ isMobile = false }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -18,9 +18,9 @@ const Starfield = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Create stars (INCREASED)
+    // Create stars - Reduced on mobile for performance
     const stars = [];
-    const numStars = 600;
+    const numStars = isMobile ? 200 : 600;
     
     for (let i = 0; i < numStars; i++) {
       stars.push({

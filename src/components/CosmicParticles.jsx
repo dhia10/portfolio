@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CosmicParticles = () => {
+const CosmicParticles = ({ isMobile = false }) => {
   // Generate random floating particles
-  const particles = Array.from({ length: 30 }, (_, i) => ({
+  const particleCount = isMobile ? 10 : 30;
+  const particles = Array.from({ length: particleCount }, (_, i) => ({
     id: i,
     size: Math.random() * 4 + 2,
     left: `${Math.random() * 100}%`,
