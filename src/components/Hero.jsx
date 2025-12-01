@@ -92,7 +92,7 @@ const Hero = () => {
                      background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(6, 182, 212, 0.05))'
                    }}>
                 <img 
-                  src="/me.jpeg" 
+                  src="/me.png" 
                   alt={personalInfo.name}
                   className="w-full h-full object-cover"
                   style={{ aspectRatio: '1/1.2' }}
