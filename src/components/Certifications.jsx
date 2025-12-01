@@ -28,10 +28,7 @@ const Certifications = () => {
               className="glass-effect p-5 sm:p-6 rounded-xl hover:border-primary-500/50 transition-all duration-300 group"
               style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 0 15px rgba(14, 165, 233, 0.1)' }}
             >
-              <div className="flex items-start gap-3 sm:gap-4 mb-3">
-                <div className="text-3xl sm:text-4xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  {cert.icon}
-                </div>
+              <div className="flex flex-col gap-3 mb-3">
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base sm:text-lg font-bold mb-1 text-white leading-snug">
                     {cert.title}
@@ -46,7 +43,7 @@ const Certifications = () => {
               </div>
               <div className="flex items-center gap-2 text-xs text-slate-300">
                 <Award size={14} className="text-primary-400 flex-shrink-0" />
-                <span>Certified</span>
+                <span>{cert.inProgress ? 'In Progress' : 'Certified'}</span>
               </div>
             </motion.div>
           ))}

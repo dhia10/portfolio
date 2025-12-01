@@ -27,32 +27,33 @@ export const certifications = [
   {
     title: "Building RAG Agents with LLMs",
     issuer: "NVIDIA",
-    year: "2024",
-    icon: "🤖"
+    year: "2024"
   },
   {
     title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations",
     issuer: "Oracle",
-    year: "2025",
-    icon: "☁️"
+    year: "2025"
   },
   {
     title: "Cisco Certified Network Associate (CCNA)",
     issuer: "Cisco",
-    year: "2023",
-    icon: "🌐"
+    year: "2023"
   },
   {
     title: "The Machine Learning Process A-Z",
     issuer: "365 Data Science",
-    year: "2023",
-    icon: "📊"
+    year: "2023"
   },
   {
     title: "The Machine Learning Algorithms A-Z",
     issuer: "365 Data Science",
-    year: "2023",
-    icon: "📈"
+    year: "2023"
+  },
+  {
+    title: "Cybersecurity Awareness and Innovation",
+    issuer: "In Progress",
+    year: "2025",
+    inProgress: true
   }
 ];
 
@@ -304,4 +305,13 @@ export const businessActivities = [
     description: "Theatre-style Scrum explanations, logo creation, mascot design (Chill Croco)",
     icon: "🎬"
   }
+];
+
+export const hobbies = [
+  { name: "Creating Content" },
+  { name: "Strategy/puzzle challenges" },
+  { name: "Karaoke & music" },
+  { name: "Gaming" },
+  { name: "Environmental & animal care" },
+  { name: "Reading Books" }
 ];

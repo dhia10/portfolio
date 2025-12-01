@@ -71,11 +71,6 @@ const Hero = () => {
                 <Phone size={16} className="sm:w-[18px] sm:h-[18px]" />
                 <span className="text-xs sm:text-sm font-medium">{personalInfo.phone}</span>
               </div>
-              
-              <div className="glass-effect px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg flex items-center gap-2">
-                <MapPin size={16} className="sm:w-[18px] sm:h-[18px]" />
-                <span className="text-xs sm:text-sm font-medium">{personalInfo.location}</span>
-              </div>
             </motion.div>
           </motion.div>
           
